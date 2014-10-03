@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmapidb", "libmapidb\libmapidb.vcproj", "{62B73BEA-ED71-470C-8B44-02BCFB209E3E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1} = {96BF8356-7605-4D24-BCDA-70ABFD26F6E1}
+		{F7F76707-A028-40E5-9B58-295E6F64C732} = {F7F76707-A028-40E5-9B58-295E6F64C732}
+		{968E17CC-B508-4DF2-8D9B-29C21BC1A102} = {968E17CC-B508-4DF2-8D9B-29C21BC1A102}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcstring", "libcstring\libcstring.vcproj", "{96BF8356-7605-4D24-BCDA-70ABFD26F6E1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcerror", "libcerror\libcerror.vcproj", "{F7F76707-A028-40E5-9B58-295E6F64C732}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1} = {96BF8356-7605-4D24-BCDA-70ABFD26F6E1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcnotify", "libcnotify\libcnotify.vcproj", "{968E17CC-B508-4DF2-8D9B-29C21BC1A102}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1} = {96BF8356-7605-4D24-BCDA-70ABFD26F6E1}
+		{F7F76707-A028-40E5-9B58-295E6F64C732} = {F7F76707-A028-40E5-9B58-295E6F64C732}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+		VSDebug|Win32 = VSDebug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62B73BEA-ED71-470C-8B44-02BCFB209E3E}.Release|Win32.ActiveCfg = Release|Win32
+		{62B73BEA-ED71-470C-8B44-02BCFB209E3E}.Release|Win32.Build.0 = Release|Win32
+		{62B73BEA-ED71-470C-8B44-02BCFB209E3E}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{62B73BEA-ED71-470C-8B44-02BCFB209E3E}.VSDebug|Win32.Build.0 = VSDebug|Win32
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1}.Release|Win32.ActiveCfg = Release|Win32
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1}.Release|Win32.Build.0 = Release|Win32
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1}.VSDebug|Win32.Build.0 = VSDebug|Win32
+		{F7F76707-A028-40E5-9B58-295E6F64C732}.Release|Win32.ActiveCfg = Release|Win32
+		{F7F76707-A028-40E5-9B58-295E6F64C732}.Release|Win32.Build.0 = Release|Win32
+		{F7F76707-A028-40E5-9B58-295E6F64C732}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{F7F76707-A028-40E5-9B58-295E6F64C732}.VSDebug|Win32.Build.0 = VSDebug|Win32
+		{968E17CC-B508-4DF2-8D9B-29C21BC1A102}.Release|Win32.ActiveCfg = Release|Win32
+		{968E17CC-B508-4DF2-8D9B-29C21BC1A102}.Release|Win32.Build.0 = Release|Win32
+		{968E17CC-B508-4DF2-8D9B-29C21BC1A102}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{968E17CC-B508-4DF2-8D9B-29C21BC1A102}.VSDebug|Win32.Build.0 = VSDebug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

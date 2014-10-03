@@ -1,0 +1,6 @@
+libmapidb is a library access the Exchange MAPI database format.
+
+For more information see:
+* Project documentation: https://github.com/libyal/libmapidb/wiki/Home
+* How to build from source: https://github.com/libyal/libmapidb/wiki/Building
+
