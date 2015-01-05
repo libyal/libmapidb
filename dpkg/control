@@ -1,13 +1,12 @@
 Source: libmapidb
-Section: unknown
+Section: libs
 Priority: extra
 Maintainer: Joachim Metz <joachim.metz@gmail.com>
 Build-Depends: debhelper (>= 7), autotools-dev
-Standards-Version: 3.8.3
+Standards-Version: 3.9.5
 Homepage: https://github.com/libyal/libmapidb/
 
 Package: libmapidb
-Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: libmapidb-dbg
@@ -17,14 +16,14 @@ Description: Library to access the Exchange MAPI database format
 Package: libmapidb-dbg
 Architecture: any
 Section: debug
-Depends: libmapidb (= ${Source-Version}), ${misc:Depends}
+Depends: libmapidb (= ${binary:Version}), ${misc:Depends}
 Description: Debugging symbols for libmapidb
  Debugging symbols for libmapidb.
 
 Package: libmapidb-dev
 Section: libdevel
 Architecture: any
-Depends: libmapidb (= ${Source-Version})
+Depends: libmapidb (= ${binary:Version}), ${misc:Depends}
 Description: Header files and libraries for developing applications for libmapidb
  Header files and libraries for developing applications for libmapidb.
 
