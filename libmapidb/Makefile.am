@@ -21,7 +21,7 @@ libmapidb_la_SOURCES = \
 	libmapidb_types.h \
 	libmapidb_unused.h
 
-libmapidb_la_LIBADD  = \
+libmapidb_la_LIBADD = \
 	@LIBCSTRING_LIBADD@ \
 	@LIBCERROR_LIBADD@ \
 	@LIBCNOTIFY_LIBADD@
