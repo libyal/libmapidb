@@ -41,9 +41,9 @@ typedef struct libmapidb_folder {}	libmapidb_folder_t;
 typedef intptr_t libmapidb_database_t;
 typedef intptr_t libmapidb_folder_t;
 
-#endif
+#endif /* defined( HAVE_DEBUG_OUTPUT ) && !defined( WINAPI ) */
 
-#endif
+#endif /* defined( HAVE_LOCAL_LIBMAPIDB ) */
 
-#endif
+#endif /* !defined( _LIBMAPIDB_INTERNAL_TYPES_H ) */
 
