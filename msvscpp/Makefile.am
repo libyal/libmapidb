@@ -3,6 +3,7 @@ MSVSCPP_FILES = \
 	libcnotify/libcnotify.vcproj \
 	libcstring/libcstring.vcproj \
 	libmapidb/libmapidb.vcproj \
+	mapidb_test_get_version/mapidb_test_get_version.vcproj \
 	libmapidb.sln
 
 SCRIPT_FILES = \

@@ -2,7 +2,7 @@ AC_PREREQ( 2.59 )
 
 AC_INIT(
  [libmapidb],
- [20160307],
+ [20160508],
  [joachim.metz@gmail.com])
 
 AC_CONFIG_SRCDIR(
@@ -87,6 +87,11 @@ AS_IF(
   AC_SUBST(
    [HAVE_DLLMAIN],
    [1])
+
+  dnl Used in tests
+  AC_SUBST(
+   [LIBMAPIDB_DLL_IMPORT],
+   ["-DLIBMAPIDB_DLL_IMPORT"])
   ])
  ])
 
