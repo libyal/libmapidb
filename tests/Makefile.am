@@ -16,12 +16,25 @@ EXTRA_DIST = \
 	$(check_SCRIPTS)
 
 check_PROGRAMS = \
+	mapidb_test_error \
 	mapidb_test_get_version
 
-mapidb_test_get_version_SOURCES = \
+mapidb_test_error_SOURCES = \
+	mapidb_test_error.c \
 	mapidb_test_libmapidb.h \
 	mapidb_test_libcstring.h \
+	mapidb_test_macros.h \
+	mapidb_test_unused.h
+
+mapidb_test_error_LDADD = \
+	../libmapidb/libmapidb.la \
+	@LIBCSTRING_LIBADD@
+
+mapidb_test_get_version_SOURCES = \
 	mapidb_test_get_version.c \
+	mapidb_test_libmapidb.h \
+	mapidb_test_libcstring.h \
+	mapidb_test_macros.h \
 	mapidb_test_unused.h
 
 mapidb_test_get_version_LDADD = \

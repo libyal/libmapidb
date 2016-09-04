@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="mapidb_test_get_version"
-	ProjectGUID="{F8C7158D-A8B7-4B86-850B-85AC52B740FA}"
-	RootNamespace="mapidb_test_get_version"
+	Name="mapidb_test_error"
+	ProjectGUID="{EA58C65E-99B1-4900-B5DB-B64350DA7A96}"
+	RootNamespace="mapidb_test_error"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="131072"
 	>
@@ -176,7 +176,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\tests\mapidb_test_get_version.c"
+				RelativePath="..\..\tests\mapidb_test_error.c"
 				>
 			</File>
 		</Filter>

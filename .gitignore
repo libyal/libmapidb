@@ -119,6 +119,7 @@ stamp-h[1-9]
 /include/libmapidb/types.h
 /libmapidb/libmapidb.rc
 /libmapidb/libmapidb_definitions.h
+/tests/mapidb_test_error
 /tests/mapidb_test_get_version
 /tests/tmp*
 

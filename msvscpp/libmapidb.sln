@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mapidb_test_error", "mapidb_test_error\mapidb_test_error.vcproj", "{EA58C65E-99B1-4900-B5DB-B64350DA7A96}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62B73BEA-ED71-470C-8B44-02BCFB209E3E} = {62B73BEA-ED71-470C-8B44-02BCFB209E3E}
+		{96BF8356-7605-4D24-BCDA-70ABFD26F6E1} = {96BF8356-7605-4D24-BCDA-70ABFD26F6E1}
+	EndProjectSection
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mapidb_test_get_version", "mapidb_test_get_version\mapidb_test_get_version.vcproj", "{F8C7158D-A8B7-4B86-850B-85AC52B740FA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{62B73BEA-ED71-470C-8B44-02BCFB209E3E} = {62B73BEA-ED71-470C-8B44-02BCFB209E3E}
@@ -33,6 +39,10 @@ Global
 		VSDebug|Win32 = VSDebug|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA58C65E-99B1-4900-B5DB-B64350DA7A96}.Release|Win32.ActiveCfg = Release|Win32
+		{EA58C65E-99B1-4900-B5DB-B64350DA7A96}.Release|Win32.Build.0 = Release|Win32
+		{EA58C65E-99B1-4900-B5DB-B64350DA7A96}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{EA58C65E-99B1-4900-B5DB-B64350DA7A96}.VSDebug|Win32.Build.0 = VSDebug|Win32
 		{F8C7158D-A8B7-4B86-850B-85AC52B740FA}.Release|Win32.ActiveCfg = Release|Win32
 		{F8C7158D-A8B7-4B86-850B-85AC52B740FA}.Release|Win32.Build.0 = Release|Win32
 		{F8C7158D-A8B7-4B86-850B-85AC52B740FA}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
