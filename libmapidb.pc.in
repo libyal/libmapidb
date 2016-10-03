@@ -3,7 +3,7 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: libuna
+Name: libmapidb
 Description: Library to access the Exchange MAPI database format
 Version: @VERSION@
 Libs: -L${libdir} -lmapidb
