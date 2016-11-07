@@ -1,45 +1,66 @@
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/include \
 	-I$(top_srcdir)/common \
-	@LIBCSTRING_CPPFLAGS@ \
 	@LIBCERROR_CPPFLAGS@ \
 	@LIBMAPIDB_DLL_IMPORT@
 
 TESTS = \
-	test_api_functions.sh
+	test_api_functions.sh \
+	test_api_types.sh
 
 check_SCRIPTS = \
 	test_api_functions.sh \
+	test_api_types.sh \
 	test_runner.sh
 
 EXTRA_DIST = \
 	$(check_SCRIPTS)
 
 check_PROGRAMS = \
+	mapidb_test_database \
 	mapidb_test_error \
-	mapidb_test_get_version
+	mapidb_test_folder \
+	mapidb_test_support
+
+mapidb_test_database_SOURCES = \
+	mapidb_test_database.c \
+	mapidb_test_libcerror.h \
+	mapidb_test_libmapidb.h \
+	mapidb_test_macros.h \
+	mapidb_test_unused.h
+
+mapidb_test_database_LDADD = \
+	../libmapidb/libmapidb.la \
+	@LIBCERROR_LIBADD@
 
 mapidb_test_error_SOURCES = \
 	mapidb_test_error.c \
 	mapidb_test_libmapidb.h \
-	mapidb_test_libcstring.h \
 	mapidb_test_macros.h \
 	mapidb_test_unused.h
 
 mapidb_test_error_LDADD = \
-	../libmapidb/libmapidb.la \
-	@LIBCSTRING_LIBADD@
+	../libmapidb/libmapidb.la
 
-mapidb_test_get_version_SOURCES = \
-	mapidb_test_get_version.c \
+mapidb_test_folder_SOURCES = \
+	mapidb_test_folder.c \
+	mapidb_test_libcerror.h \
 	mapidb_test_libmapidb.h \
-	mapidb_test_libcstring.h \
 	mapidb_test_macros.h \
 	mapidb_test_unused.h
 
-mapidb_test_get_version_LDADD = \
+mapidb_test_folder_LDADD = \
 	../libmapidb/libmapidb.la \
-	@LIBCSTRING_LIBADD@
+	@LIBCERROR_LIBADD@
+
+mapidb_test_support_SOURCES = \
+	mapidb_test_support.c \
+	mapidb_test_libmapidb.h \
+	mapidb_test_macros.h \
+	mapidb_test_unused.h
+
+mapidb_test_support_LDADD = \
+	../libmapidb/libmapidb.la
 
 MAINTAINERCLEANFILES = \
 	Makefile.in

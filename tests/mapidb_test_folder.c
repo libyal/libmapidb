@@ -1,5 +1,5 @@
 /*
- * Library get version test program
+ * Library folder type testing program
  *
  * Copyright (C) 2011-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -20,46 +20,22 @@
  */
 
 #include <common.h>
+#include <file_stream.h>
+#include <types.h>
 
 #if defined( HAVE_STDLIB_H ) || defined( WINAPI )
 #include <stdlib.h>
 #endif
 
-#include "mapidb_test_libcstring.h"
+#include "mapidb_test_libcerror.h"
 #include "mapidb_test_libmapidb.h"
 #include "mapidb_test_macros.h"
+#include "mapidb_test_memory.h"
 #include "mapidb_test_unused.h"
-
-/* Tests retrieving the library version
- * Returns 1 if successful or 0 if not
- */
-int mapidb_test_get_version(
-     void )
-{
-	const char *version_string = NULL;
-	int result                 = 0;
-
-	version_string = libmapidb_get_version();
-
-	result = libcstring_narrow_string_compare(
-	          version_string,
-	          LIBMAPIDB_VERSION_STRING,
-	          9 );
-
-	MAPIDB_TEST_ASSERT_EQUAL_INT(
-	 "result",
-	 result,
-	 0 );
-
-	return( 1 );
-
-on_error:
-	return( 0 );
-}
 
 /* The main program
  */
-#if defined( LIBCSTRING_HAVE_WIDE_SYSTEM_CHARACTER )
+#if defined( HAVE_WIDE_SYSTEM_CHARACTER )
 int wmain(
      int argc MAPIDB_TEST_ATTRIBUTE_UNUSED,
      wchar_t * const argv[] MAPIDB_TEST_ATTRIBUTE_UNUSED )
@@ -71,10 +47,6 @@ int main(
 {
 	MAPIDB_TEST_UNREFERENCED_PARAMETER( argc )
 	MAPIDB_TEST_UNREFERENCED_PARAMETER( argv )
-
-	MAPIDB_TEST_RUN(
-	 "libmapidb_get_version",
-	 mapidb_test_get_version() )
 
 	return( EXIT_SUCCESS );
 

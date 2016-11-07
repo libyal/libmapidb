@@ -1,5 +1,5 @@
 /*
- * The internal libcstring header
+ * Library database type testing program
  *
  * Copyright (C) 2011-2016, Joachim Metz <joachim.metz@gmail.com>
  *
@@ -19,33 +19,38 @@
  * along with this software.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#if !defined( _MAPIDB_TEST_LIBCSTRING_H )
-#define _MAPIDB_TEST_LIBCSTRING_H
-
 #include <common.h>
+#include <file_stream.h>
+#include <types.h>
 
-/* Define HAVE_LOCAL_LIBCSTRING for local use of libcstring
- */
-#if defined( HAVE_LOCAL_LIBCSTRING )
-
-#include <libcstring_definitions.h>
-#include <libcstring_narrow_string.h>
-#include <libcstring_system_string.h>
-#include <libcstring_types.h>
-#include <libcstring_wide_string.h>
-
-#else
-
-/* If libtool DLL support is enabled set LIBCSTRING_DLL_IMPORT
- * before including libcstring.h
- */
-#if defined( _WIN32 ) && defined( DLL_IMPORT )
-#define LIBCSTRING_DLL_IMPORT
+#if defined( HAVE_STDLIB_H ) || defined( WINAPI )
+#include <stdlib.h>
 #endif
 
-#include <libcstring.h>
+#include "mapidb_test_libcerror.h"
+#include "mapidb_test_libmapidb.h"
+#include "mapidb_test_macros.h"
+#include "mapidb_test_memory.h"
+#include "mapidb_test_unused.h"
 
-#endif /* defined( HAVE_LOCAL_LIBCSTRING ) */
+/* The main program
+ */
+#if defined( HAVE_WIDE_SYSTEM_CHARACTER )
+int wmain(
+     int argc MAPIDB_TEST_ATTRIBUTE_UNUSED,
+     wchar_t * const argv[] MAPIDB_TEST_ATTRIBUTE_UNUSED )
+#else
+int main(
+     int argc MAPIDB_TEST_ATTRIBUTE_UNUSED,
+     char * const argv[] MAPIDB_TEST_ATTRIBUTE_UNUSED )
+#endif
+{
+	MAPIDB_TEST_UNREFERENCED_PARAMETER( argc )
+	MAPIDB_TEST_UNREFERENCED_PARAMETER( argv )
 
-#endif /* !defined( _MAPIDB_TEST_LIBCSTRING_H ) */
+	return( EXIT_SUCCESS );
+
+on_error:
+	return( EXIT_FAILURE );
+}
 

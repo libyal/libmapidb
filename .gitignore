@@ -1,6 +1,6 @@
 # Files to ignore by git
 #
-# Version: 20160507
+# Version: 20161030
 
 # Generic auto-generated build files
 *~
@@ -57,6 +57,7 @@ stamp-h[1-9]
 /test-driver
 /ylwrap
 /m4/codeset.m4
+/m4/extern-inline.m4
 /m4/fcntl-o.m4
 /m4/gettext.m4
 /m4/glibc2.m4
@@ -119,11 +120,12 @@ stamp-h[1-9]
 /include/libmapidb/types.h
 /libmapidb/libmapidb.rc
 /libmapidb/libmapidb_definitions.h
+/tests/mapidb_test_database
 /tests/mapidb_test_error
-/tests/mapidb_test_get_version
+/tests/mapidb_test_folder
+/tests/mapidb_test_support
 /tests/tmp*
 
 # Local library dependencies specific files
 /libcerror
 /libcnotify
-/libcstring

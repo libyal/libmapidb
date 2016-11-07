@@ -2,9 +2,10 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="libmapidb"
-	ProjectGUID="{62B73BEA-ED71-470C-8B44-02BCFB209E3E}"
-	RootNamespace="libmapidb"
+	Name="mapidb_test_folder"
+	ProjectGUID="{0927E3E0-7A81-488A-9D56-98C85DD461C5}"
+	RootNamespace="mapidb_test_folder"
+	Keyword="Win32Proj"
 	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
@@ -19,8 +20,9 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
+			ConfigurationType="1"
 			CharacterSet="1"
+			WholeProgramOptimization="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -39,8 +41,8 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcerror;..\..\libcnotify"
-				PreprocessorDefinitions="_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;HAVE_LOCAL_LIBCNOTIFY;LIBMAPIDB_DLL_EXPORT"
+				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcerror"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;LIBMAPIDB_DLL_IMPORT"
 				RuntimeLibrary="2"
 				WarningLevel="4"
 				CompileAs="1"
@@ -56,12 +58,14 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName).dll"
+				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;$(OutDir)&quot;"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
 				RandomizedBaseAddress="2"
 				DataExecutionPrevention="2"
 				TargetMachine="1"
-				ImportLibrary="$(OutDir)\$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -89,7 +93,7 @@
 			Name="VSDebug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
+			ConfigurationType="1"
 			CharacterSet="1"
 			>
 			<Tool
@@ -110,8 +114,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcerror;..\..\libcnotify"
-				PreprocessorDefinitions="_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;HAVE_LOCAL_LIBCNOTIFY;LIBMAPIDB_DLL_EXPORT"
+				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcerror"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;LIBMAPIDB_DLL_IMPORT"
 				BasicRuntimeChecks="3"
 				SmallerTypeCheck="true"
 				RuntimeLibrary="3"
@@ -130,13 +134,15 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName).dll"
+				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;$(OutDir)&quot;"
 				GenerateDebugInformation="true"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="1"
 				TargetMachine="1"
-				ImportLibrary="$(OutDir)\$(ProjectName).lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -170,23 +176,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\libmapidb\libmapidb.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_database.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_error.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_folder.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_support.c"
+				RelativePath="..\..\tests\mapidb_test_folder.c"
 				>
 			</File>
 		</Filter>
@@ -196,43 +186,19 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath="..\..\libmapidb\libmapidb_database.h"
+				RelativePath="..\..\tests\mapidb_test_libcerror.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\libmapidb\libmapidb_definitions.h"
+				RelativePath="..\..\tests\mapidb_test_libmapidb.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\libmapidb\libmapidb_error.h"
+				RelativePath="..\..\tests\mapidb_test_macros.h"
 				>
 			</File>
 			<File
-				RelativePath="..\..\libmapidb\libmapidb_extern.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_folder.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_libcerror.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_libcnotify.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_support.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_types.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb_unused.h"
+				RelativePath="..\..\tests\mapidb_test_unused.h"
 				>
 			</File>
 		</Filter>
@@ -241,10 +207,6 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
-			<File
-				RelativePath="..\..\libmapidb\libmapidb.rc"
-				>
-			</File>
 		</Filter>
 	</Files>
 	<Globals>

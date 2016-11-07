@@ -26,9 +26,9 @@
 
 #define LIBMAPIDB_VERSION			@VERSION@
 
-/* The libmapidb version string
+/* The version string
  */
 #define LIBMAPIDB_VERSION_STRING		"@VERSION@"
 
-#endif
+#endif /* !defined( _LIBMAPIDB_DEFINITIONS_H ) */
 

@@ -24,10 +24,6 @@
 
 /* The libmapidb type support features
  */
-#if defined( WINAPI ) || @HAVE_WIDE_CHARACTER_TYPE@
-#define LIBMAPIDB_HAVE_WIDE_CHARACTER_TYPE	1
-#endif
-
 #if !defined( LIBMAPIDB_DEPRECATED )
 #if defined( __GNUC__ ) && __GNUC__ >= 3
 #define LIBMAPIDB_DEPRECATED	__attribute__ ((__deprecated__))
@@ -38,5 +34,5 @@
 #endif
 #endif
 
-#endif
+#endif /* !defined( _LIBMAPIDB_FEATURES_H ) */
 

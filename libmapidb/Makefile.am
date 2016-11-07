@@ -1,7 +1,6 @@
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/include \
 	-I$(top_srcdir)/common \
-	@LIBCSTRING_CPPFLAGS@ \
 	@LIBCERROR_CPPFLAGS@ \
 	@LIBCNOTIFY_CPPFLAGS@
 
@@ -16,13 +15,11 @@ libmapidb_la_SOURCES = \
 	libmapidb_folder.c libmapidb_folder.h \
 	libmapidb_libcerror.h \
 	libmapidb_libcnotify.h \
-	libmapidb_libcstring.h \
 	libmapidb_support.c libmapidb_support.h \
 	libmapidb_types.h \
 	libmapidb_unused.h
 
 libmapidb_la_LIBADD = \
-	@LIBCSTRING_LIBADD@ \
 	@LIBCERROR_LIBADD@ \
 	@LIBCNOTIFY_LIBADD@
 

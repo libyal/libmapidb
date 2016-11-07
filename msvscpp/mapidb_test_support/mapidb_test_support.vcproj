@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="mapidb_test_get_version"
-	ProjectGUID="{F8C7158D-A8B7-4B86-850B-85AC52B740FA}"
-	RootNamespace="mapidb_test_get_version"
+	Name="mapidb_test_support"
+	ProjectGUID="{6CD4DCA7-C15F-4C7C-A02D-9A7D04FE0F32}"
+	RootNamespace="mapidb_test_support"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="131072"
 	>
@@ -41,8 +41,8 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcstring;..\..\libcerror"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCSTRING;HAVE_LOCAL_LIBCERROR;LIBMAPIDB_DLL_IMPORT"
+				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcerror"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;LIBMAPIDB_DLL_IMPORT"
 				RuntimeLibrary="2"
 				WarningLevel="4"
 				CompileAs="1"
@@ -114,8 +114,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcstring;..\..\libcerror"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCSTRING;HAVE_LOCAL_LIBCERROR;LIBMAPIDB_DLL_IMPORT"
+				AdditionalIncludeDirectories="..\..\include;..\..\common;..\..\libcerror"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;LIBMAPIDB_DLL_IMPORT"
 				BasicRuntimeChecks="3"
 				SmallerTypeCheck="true"
 				RuntimeLibrary="3"
@@ -176,7 +176,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\tests\mapidb_test_get_version.c"
+				RelativePath="..\..\tests\mapidb_test_support.c"
 				>
 			</File>
 		</Filter>
@@ -185,10 +185,6 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
-			<File
-				RelativePath="..\..\tests\mapidb_test_libcstring.h"
-				>
-			</File>
 			<File
 				RelativePath="..\..\tests\mapidb_test_libmapidb.h"
 				>

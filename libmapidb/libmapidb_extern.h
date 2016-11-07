@@ -38,10 +38,9 @@
 #include <libmapidb/extern.h>
 
 #else
-
 #define LIBMAPIDB_EXTERN	extern
 
 #endif
 
-#endif
+#endif /* !defined( _LIBMAPIDB_INTERNAL_EXTERN_H ) */
 

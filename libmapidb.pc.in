@@ -7,6 +7,6 @@ Name: libmapidb
 Description: Library to access the Exchange MAPI database format
 Version: @VERSION@
 Libs: -L${libdir} -lmapidb
-Libs.private: @ax_libcerror_pc_libs_private@ @ax_libcnotify_pc_libs_private@ @ax_libcstring_pc_libs_private@
+Libs.private: @ax_libcerror_pc_libs_private@ @ax_libcnotify_pc_libs_private@
 Cflags: -I${includedir}
 

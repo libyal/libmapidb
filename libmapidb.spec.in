@@ -7,8 +7,8 @@ License: LGPL
 Source: %{name}-%{version}.tar.gz
 URL: https://github.com/libyal/libmapidb/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-@libmapidb_spec_requires@ @ax_libcerror_spec_requires@ @ax_libcstring_spec_requires@
-@libmapidb_spec_build_requires@ @ax_libcerror_spec_build_requires@ @ax_libcstring_spec_build_requires@
+@libmapidb_spec_requires@ @ax_libcerror_spec_requires@
+@libmapidb_spec_build_requires@ @ax_libcerror_spec_build_requires@
 
 %description
 libmapidb is a library to access the Exchange MAPI database format

@@ -20,6 +20,8 @@
  */
 
 #include <common.h>
+#include <file_stream.h>
+#include <types.h>
 
 #if defined( HAVE_STDLIB_H ) || defined( WINAPI )
 #include <stdlib.h>
@@ -108,7 +110,7 @@ int mapidb_test_error_backtrace_sprint(
 
 /* The main program
  */
-#if defined( LIBCSTRING_HAVE_WIDE_SYSTEM_CHARACTER )
+#if defined( HAVE_WIDE_SYSTEM_CHARACTER )
 int wmain(
      int argc MAPIDB_TEST_ATTRIBUTE_UNUSED,
      wchar_t * const argv[] MAPIDB_TEST_ATTRIBUTE_UNUSED )
@@ -123,23 +125,23 @@ int main(
 
 	MAPIDB_TEST_RUN(
 	 "libmapidb_error_free",
-	 mapidb_test_error_free() )
+	 mapidb_test_error_free );
 
 	MAPIDB_TEST_RUN(
 	 "libmapidb_error_fprint",
-	 mapidb_test_error_fprint() )
+	 mapidb_test_error_fprint );
 
 	MAPIDB_TEST_RUN(
 	 "libmapidb_error_sprint",
-	 mapidb_test_error_sprint() )
+	 mapidb_test_error_sprint );
 
 	MAPIDB_TEST_RUN(
 	 "libmapidb_error_backtrace_fprint",
-	 mapidb_test_error_backtrace_fprint() )
+	 mapidb_test_error_backtrace_fprint );
 
 	MAPIDB_TEST_RUN(
 	 "libmapidb_error_backtrace_sprint",
-	 mapidb_test_error_backtrace_sprint() )
+	 mapidb_test_error_backtrace_sprint );
 
 	return( EXIT_SUCCESS );
 
