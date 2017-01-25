@@ -2,15 +2,14 @@ AM_CPPFLAGS = \
 	-I$(top_srcdir)/include \
 	-I$(top_srcdir)/common \
 	@LIBCERROR_CPPFLAGS@ \
+	@LIBCNOTIFY_CPPFLAGS@ \
 	@LIBMAPIDB_DLL_IMPORT@
 
 TESTS = \
-	test_api_functions.sh \
-	test_api_types.sh
+	test_library.sh
 
 check_SCRIPTS = \
-	test_api_functions.sh \
-	test_api_types.sh \
+	test_library.sh \
 	test_runner.sh
 
 EXTRA_DIST = \
@@ -27,6 +26,7 @@ mapidb_test_database_SOURCES = \
 	mapidb_test_libcerror.h \
 	mapidb_test_libmapidb.h \
 	mapidb_test_macros.h \
+	mapidb_test_memory.c mapidb_test_memory.h \
 	mapidb_test_unused.h
 
 mapidb_test_database_LDADD = \
@@ -47,6 +47,7 @@ mapidb_test_folder_SOURCES = \
 	mapidb_test_libcerror.h \
 	mapidb_test_libmapidb.h \
 	mapidb_test_macros.h \
+	mapidb_test_memory.c mapidb_test_memory.h \
 	mapidb_test_unused.h
 
 mapidb_test_folder_LDADD = \
@@ -54,9 +55,9 @@ mapidb_test_folder_LDADD = \
 	@LIBCERROR_LIBADD@
 
 mapidb_test_support_SOURCES = \
-	mapidb_test_support.c \
 	mapidb_test_libmapidb.h \
 	mapidb_test_macros.h \
+	mapidb_test_support.c \
 	mapidb_test_unused.h
 
 mapidb_test_support_LDADD = \
