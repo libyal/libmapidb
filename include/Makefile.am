@@ -2,6 +2,7 @@ include_HEADERS = \
 	libmapidb.h
 
 pkginclude_HEADERS = \
+	libmapidb/codepage.h \
 	libmapidb/definitions.h \
 	libmapidb/error.h \
 	libmapidb/extern.h \
