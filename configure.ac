@@ -2,7 +2,7 @@ AC_PREREQ( 2.59 )
 
 AC_INIT(
  [libmapidb],
- [20170304],
+ [20170716],
  [joachim.metz@gmail.com])
 
 AC_CONFIG_SRCDIR(
@@ -145,7 +145,6 @@ AC_CONFIG_FILES([libmapidb/libmapidb_definitions.h])
 dnl Have configure make distribution specific files
 AC_CONFIG_FILES([common/types.h])
 AC_CONFIG_FILES([dpkg/changelog])
-AC_CONFIG_FILES([dpkg/copyright])
 AC_CONFIG_FILES([libmapidb/libmapidb.rc])
 AC_CONFIG_FILES([libmapidb.pc])
 AC_CONFIG_FILES([libmapidb.spec])

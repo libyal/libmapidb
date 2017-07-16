@@ -17,10 +17,9 @@ DPKG_FILES = \
 	dpkg/compat \
 	dpkg/control \
 	dpkg/copyright \
-	dpkg/copyright.in \
 	dpkg/rules \
-	dpkg/libmapidb-dev.docs \
-	dpkg/libmapidb.docs \
+	dpkg/libmapidb-dev.install \
+	dpkg/libmapidb.install \
 	dpkg/source/format
 
 GETTEXT_FILES = \
