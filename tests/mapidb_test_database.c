@@ -62,13 +62,13 @@ int mapidb_test_database_initialize(
 	 result,
 	 1 );
 
-        MAPIDB_TEST_ASSERT_IS_NOT_NULL(
-         "database",
-         database );
+	MAPIDB_TEST_ASSERT_IS_NOT_NULL(
+	 "database",
+	 database );
 
-        MAPIDB_TEST_ASSERT_IS_NULL(
-         "error",
-         error );
+	MAPIDB_TEST_ASSERT_IS_NULL(
+	 "error",
+	 error );
 
 	result = libmapidb_database_free(
 	          &database,
@@ -79,13 +79,13 @@ int mapidb_test_database_initialize(
 	 result,
 	 1 );
 
-        MAPIDB_TEST_ASSERT_IS_NULL(
-         "database",
-         database );
+	MAPIDB_TEST_ASSERT_IS_NULL(
+	 "database",
+	 database );
 
-        MAPIDB_TEST_ASSERT_IS_NULL(
-         "error",
-         error );
+	MAPIDB_TEST_ASSERT_IS_NULL(
+	 "error",
+	 error );
 
 	/* Test error cases
 	 */
@@ -98,9 +98,9 @@ int mapidb_test_database_initialize(
 	 result,
 	 -1 );
 
-        MAPIDB_TEST_ASSERT_IS_NOT_NULL(
-         "error",
-         error );
+	MAPIDB_TEST_ASSERT_IS_NOT_NULL(
+	 "error",
+	 error );
 
 	libcerror_error_free(
 	 &error );
@@ -116,9 +116,9 @@ int mapidb_test_database_initialize(
 	 result,
 	 -1 );
 
-        MAPIDB_TEST_ASSERT_IS_NOT_NULL(
-         "error",
-         error );
+	MAPIDB_TEST_ASSERT_IS_NOT_NULL(
+	 "error",
+	 error );
 
 	libcerror_error_free(
 	 &error );
@@ -250,9 +250,9 @@ int mapidb_test_database_free(
 	 result,
 	 -1 );
 
-        MAPIDB_TEST_ASSERT_IS_NOT_NULL(
-         "error",
-         error );
+	MAPIDB_TEST_ASSERT_IS_NOT_NULL(
+	 "error",
+	 error );
 
 	libcerror_error_free(
 	 &error );
