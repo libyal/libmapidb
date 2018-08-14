@@ -33,8 +33,6 @@
 #include "mapidb_test_memory.h"
 #include "mapidb_test_unused.h"
 
-#include "../libmapidb/libmapidb_folder.h"
-
 /* Tests the libmapidb_folder_initialize function
  * Returns 1 if successful or 0 if not
  */
@@ -111,6 +109,8 @@ int mapidb_test_folder_initialize(
 	          &folder,
 	          &error );
 
+	folder = NULL;
+
 	MAPIDB_TEST_ASSERT_EQUAL_INT(
 	 "result",
 	 result,
@@ -122,8 +122,6 @@ int mapidb_test_folder_initialize(
 
 	libcerror_error_free(
 	 &error );
-
-	folder = NULL;
 
 #if defined( HAVE_MAPIDB_TEST_MEMORY )
 

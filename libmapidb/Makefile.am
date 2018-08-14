@@ -2,7 +2,8 @@ AM_CPPFLAGS = \
 	-I$(top_srcdir)/include \
 	-I$(top_srcdir)/common \
 	@LIBCERROR_CPPFLAGS@ \
-	@LIBCNOTIFY_CPPFLAGS@
+	@LIBCNOTIFY_CPPFLAGS@ \
+	@LIBMAPIDB_DLL_EXPORT@
 
 lib_LTLIBRARIES = libmapidb.la
 

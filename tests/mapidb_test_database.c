@@ -111,6 +111,8 @@ int mapidb_test_database_initialize(
 	          &database,
 	          &error );
 
+	database = NULL;
+
 	MAPIDB_TEST_ASSERT_EQUAL_INT(
 	 "result",
 	 result,
@@ -122,8 +124,6 @@ int mapidb_test_database_initialize(
 
 	libcerror_error_free(
 	 &error );
-
-	database = NULL;
 
 #if defined( HAVE_MAPIDB_TEST_MEMORY )
 

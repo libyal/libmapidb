@@ -2,7 +2,7 @@ AC_PREREQ( 2.59 )
 
 AC_INIT(
  [libmapidb],
- [20180402],
+ [20180814],
  [joachim.metz@gmail.com])
 
 AC_CONFIG_SRCDIR(
@@ -74,7 +74,7 @@ AS_IF(
  [test "x$enable_shared" = xyes],
  [AS_CASE(
   [$host],
-  [*cygwin* | *mingw*],
+  [*cygwin* | *mingw* | *msys*],
   [AC_DEFINE(
    [HAVE_DLLMAIN],
    [1],
@@ -83,7 +83,10 @@ AS_IF(
    [HAVE_DLLMAIN],
    [1])
 
-  dnl Used in tests
+  AC_SUBST(
+   [LIBMAPIDB_DLL_EXPORT],
+   ["-DLIBMAPIDB_DLL_EXPORT"])
+
   AC_SUBST(
    [LIBMAPIDB_DLL_IMPORT],
    ["-DLIBMAPIDB_DLL_IMPORT"])

@@ -28,17 +28,13 @@
  */
 #if !defined( HAVE_LOCAL_LIBMAPIDB )
 
-/* If libtool DLL support is enabled set LIBMAPIDB_DLL_EXPORT
- * before including libmapidb/extern.h
- */
-#if defined( _WIN32 ) && defined( DLL_EXPORT )
-#define LIBMAPIDB_DLL_EXPORT
-#endif
-
 #include <libmapidb/extern.h>
 
+#define LIBMAPIDB_EXTERN_VARIABLE	LIBMAPIDB_EXTERN
+
 #else
-#define LIBMAPIDB_EXTERN	/* extern */
+#define LIBMAPIDB_EXTERN		/* extern */
+#define LIBMAPIDB_EXTERN_VARIABLE	extern
 
 #endif /* !defined( HAVE_LOCAL_LIBMAPIDB ) */
 
