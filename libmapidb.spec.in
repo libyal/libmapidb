@@ -8,17 +8,17 @@ Source: %{name}-%{version}.tar.gz
 URL: https://github.com/libyal/libmapidb
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 @libmapidb_spec_requires@ @ax_libcerror_spec_requires@ @ax_libcnotify_spec_requires@
-@libmapidb_spec_build_requires@ @ax_libcerror_spec_build_requires@ @ax_libcnotify_spec_build_requires@
+BuildRequires: gcc @ax_libcerror_spec_build_requires@ @ax_libcnotify_spec_build_requires@
 
-%description
+%description -n libmapidb
 Library to access the Exchange MAPI database format
 
-%package devel
+%package -n libmapidb-devel
 Summary: Header files and libraries for developing applications for libmapidb
 Group: Development/Libraries
 Requires: libmapidb = %{version}-%{release}
 
-%description devel
+%description -n libmapidb-devel
 Header files and libraries for developing applications for libmapidb.
 
 %prep
@@ -39,13 +39,13 @@ rm -rf %{buildroot}
 
 %postun -p /sbin/ldconfig
 
-%files
+%files -n libmapidb
 %defattr(644,root,root,755)
 %license COPYING
 %doc AUTHORS README
 %attr(755,root,root) %{_libdir}/*.so.*
 
-%files devel
+%files -n libmapidb-devel
 %defattr(644,root,root,755)
 %license COPYING
 %doc AUTHORS README ChangeLog
