@@ -13,6 +13,14 @@ BuildRequires: gcc @ax_libcerror_spec_build_requires@ @ax_libcnotify_spec_build_
 %description -n libmapidb
 Library to access the Exchange MAPI database format
 
+%package -n libmapidb-static
+Summary: Library to access the Exchange MAPI database format
+Group: Development/Libraries
+Requires: libmapidb = %{version}-%{release}
+
+%description -n libmapidb-static
+Static library version of libmapidb.
+
 %package -n libmapidb-devel
 Summary: Header files and libraries for developing applications for libmapidb
 Group: Development/Libraries
@@ -45,11 +53,16 @@ rm -rf %{buildroot}
 %doc AUTHORS README
 %attr(755,root,root) %{_libdir}/*.so.*
 
+%files -n libmapidb-static
+%defattr(644,root,root,755)
+%license COPYING
+%doc AUTHORS README
+%attr(755,root,root) %{_libdir}/*.a
+
 %files -n libmapidb-devel
 %defattr(644,root,root,755)
 %license COPYING
-%doc AUTHORS README ChangeLog
-%{_libdir}/*.a
+%doc AUTHORS README
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libmapidb.pc

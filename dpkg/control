@@ -9,6 +9,8 @@ Homepage: https://github.com/libyal/libmapidb
 Package: libmapidb
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libmapidb1
+Replaces: libmapidb1
 Suggests: libmapidb-dbg
 Description: Library to access the Exchange MAPI database format
  libmapidb is a library to access the Exchange MAPI database format.
