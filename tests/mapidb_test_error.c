@@ -27,7 +27,6 @@
 #include <stdlib.h>
 #endif
 
-#include "mapidb_test_libcerror.h"
 #include "mapidb_test_libmapidb.h"
 #include "mapidb_test_macros.h"
 #include "mapidb_test_unused.h"
