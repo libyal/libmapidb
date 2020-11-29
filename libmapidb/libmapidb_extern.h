@@ -30,7 +30,11 @@
 
 #include <libmapidb/extern.h>
 
+#if defined( __CYGWIN__ )
+#define LIBMAPIDB_EXTERN_VARIABLE	extern
+#else
 #define LIBMAPIDB_EXTERN_VARIABLE	LIBMAPIDB_EXTERN
+#endif
 
 #else
 #define LIBMAPIDB_EXTERN		/* extern */
