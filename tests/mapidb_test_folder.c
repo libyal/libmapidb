@@ -1,7 +1,7 @@
 /*
  * Library folder type test program
  *
- * Copyright (C) 2011-2020, Joachim Metz <joachim.metz@gmail.com>
+ * Copyright (C) 2011-2021, Joachim Metz <joachim.metz@gmail.com>
  *
  * Refer to AUTHORS for acknowledgements.
  *
@@ -32,6 +32,8 @@
 #include "mapidb_test_macros.h"
 #include "mapidb_test_memory.h"
 #include "mapidb_test_unused.h"
+
+#include "../libmapidb/libmapidb_folder.h"
 
 /* Tests the libmapidb_folder_initialize function
  * Returns 1 if successful or 0 if not
