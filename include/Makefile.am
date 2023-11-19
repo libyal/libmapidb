@@ -18,9 +18,9 @@ MAINTAINERCLEANFILES = \
 	Makefile.in
 
 distclean: clean
-	/bin/rm -f libmapidb.h
-	/bin/rm -f libmapidb/definitions.h
-	/bin/rm -f libmapidb/features.h
-	/bin/rm -f libmapidb/types.h
-	/bin/rm -f Makefile
+	-rm -f libmapidb.h
+	-rm -f libmapidb/definitions.h
+	-rm -f libmapidb/features.h
+	-rm -f libmapidb/types.h
+	-rm -f Makefile
 
