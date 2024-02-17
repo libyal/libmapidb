@@ -2,7 +2,7 @@ AC_PREREQ([2.71])
 
 AC_INIT(
  [libmapidb],
- [20231119],
+ [20240217],
  [joachim.metz@gmail.com])
 
 AC_CONFIG_SRCDIR(
