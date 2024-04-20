@@ -2,6 +2,7 @@ include_HEADERS = \
 	libmapidb.h
 
 pkginclude_HEADERS = \
+	libmapidb/codepage.h \
 	libmapidb/definitions.h \
 	libmapidb/error.h \
 	libmapidb/extern.h \
@@ -14,13 +15,11 @@ EXTRA_DIST = \
 	libmapidb/features.h.in \
 	libmapidb/types.h.in
 
-MAINTAINERCLEANFILES = \
+DISTCLEANFILES = \
+	libmapidb.h \
+	libmapidb/definitions.h \
+	libmapidb/features.h \
+	libmapidb/types.h \
+	Makefile \
 	Makefile.in
-
-distclean: clean
-	-rm -f libmapidb.h
-	-rm -f libmapidb/definitions.h
-	-rm -f libmapidb/features.h
-	-rm -f libmapidb/types.h
-	-rm -f Makefile
 
