@@ -132,6 +132,7 @@ stamp-h[1-9]
 /tests/mapidb_test_error
 /tests/mapidb_test_folder
 /tests/mapidb_test_support
+/tests/notify_stream.log
 /tests/tmp*
 
 # Local library dependencies specific files

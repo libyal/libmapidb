@@ -1,6 +1,6 @@
 dnl Checks for required headers and functions
 dnl
-dnl Version: 20200715
+dnl Version: 20240531
 
 dnl Function to detect if libmapidb dependencies are available
   ])
