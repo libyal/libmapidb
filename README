@@ -3,7 +3,7 @@ libmapidb is a library access the Exchange MAPI database format.
 Project information:
 
 * Status: experimental
-* Licence: LGPLv3+
+* Licence: LGPL-3.0-or-later
 
 For more information see:
 
