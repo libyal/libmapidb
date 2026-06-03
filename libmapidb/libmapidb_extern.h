@@ -24,21 +24,28 @@
 
 #include <common.h>
 
+#if !defined( __CYGWIN__ ) && !defined( _WIN32 ) && defined( __has_attribute )
+#if __has_attribute( visibility )
+#define LIBMAPIDB_INTERNAL	__attribute__((visibility("hidden"))) extern
+
+#else
+#define LIBMAPIDB_INTERNAL	extern
+
+#endif /* __has_attribute( visibility ) */
+#else
+#define LIBMAPIDB_INTERNAL	extern
+
+#endif /* !defined( __CYGWIN__ ) && !defined( _WIN32 ) && defined( __has_attribute ) */
+
 /* Define HAVE_LOCAL_LIBMAPIDB for local use of libmapidb
  */
 #if !defined( HAVE_LOCAL_LIBMAPIDB )
 
 #include <libmapidb/extern.h>
 
-#if defined( __CYGWIN__ ) || defined( __MINGW32__ )
-#define LIBMAPIDB_EXTERN_VARIABLE	extern
-#else
-#define LIBMAPIDB_EXTERN_VARIABLE	LIBMAPIDB_EXTERN
-#endif
-
 #else
 #define LIBMAPIDB_EXTERN		/* extern */
-#define LIBMAPIDB_EXTERN_VARIABLE	extern
+#define LIBMAPIDB_EXTERN_VARIABLE	LIBMAPIDB_INTERNAL
 
 #endif /* !defined( HAVE_LOCAL_LIBMAPIDB ) */
 
