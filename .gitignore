@@ -1,6 +1,6 @@
 # Files to ignore by git
 #
-# Version: 20251129
+# Version: 20260604
 
 # Generic auto-generated build files
 *~
@@ -127,12 +127,20 @@ stamp-h[1-9]
 /libmapidb.spec
 /libmapidb/libmapidb.rc
 /libmapidb/libmapidb_definitions.h
+/tests/*.dir
 /tests/*.exe
+/tests/*.log
+/tests/*.tmp
+/tests/atconfig
+/tests/atlocal
 /tests/mapidb_test_database
 /tests/mapidb_test_error
 /tests/mapidb_test_folder
 /tests/mapidb_test_support
 /tests/notify_stream.log
+/tests/package.m4
+/tests/test_library
+/tests/test_manpages
 /tests/tmp*
 
 # Local library dependencies specific files
