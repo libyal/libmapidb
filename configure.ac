@@ -2,7 +2,7 @@ AC_PREREQ([2.71])
 
 AC_INIT(
   [libmapidb],
-  [20260916],
+  [20261010],
   [https://github.com/libyal/libmapidb/issues])
 
 AC_CONFIG_SRCDIR(
